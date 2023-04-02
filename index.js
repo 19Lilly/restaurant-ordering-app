@@ -13,7 +13,7 @@ function getFeedHtml(){
                 <h2>${menu.ingredients}</h2>
                 <h1>$${menu.price}</h1>
             </div>
-            <button class="add-item">+</button>
+            <button class="add-item" data-id="${menu.id}">+</button>
 
         </section>
         <div class="divider"></div>`
@@ -28,3 +28,17 @@ function render(){
 }
 
 render()
+
+document.addEventListener('click', function(e){
+    document.getElementById('order-process').innerHTML= processOrder()
+  
+    
+})
+
+function processOrder(){
+    if (menu.id === 0){
+        `<div>Pizza</div>`
+
+
+    }
+}

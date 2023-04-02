@@ -94,3 +94,8 @@ header{
     background-color: #D2D2D2;
     
 }
+
+.order{
+    display: flex;
+    justify-content: center;
+}
