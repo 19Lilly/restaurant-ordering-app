@@ -3,18 +3,25 @@ body {
     width: 600px;
     margin: 0px auto;
     font-family: 'Smythe', cursive;
+    font-style: normal;
+    font-weight: 400;
     /* font-family: 'Inter', sans-serif; */
 } 
 
 
 header h1{
     font-size: 39px;
+    line-height: 24px; 
+    /* identical to box height, or 62% */
+    font-style: normal;
     font-weight: 400;
     position: absolute;
     color: #FFFFFF;
-    top: 40px;
-    left: 20px;
+    top: 20px;
+    left: 50px;
 
+    text-align: center;
+    margin-bottom:0;
 }
 
 header h2{
@@ -22,14 +29,14 @@ header h2{
     font-weight: 400;
     position: absolute;
     color: #FFFFFF;
-    bottom: 0;
-    left: 20px;
+    bottom: 40px;
+    left: 50px;
+    margin-top:0;
 }
 
 header{
     position: relative;
-    margin-bottom: 25px;
-   
+    margin-bottom: 40px;
 }
 
 .banner{
@@ -47,9 +54,9 @@ header{
 }
 
 .image-item{
-    font-size: 90px;
     display: flex;
     align-items: center;
+    padding-right: 10px;
 }
 
 .middle{
@@ -57,35 +64,42 @@ header{
     flex-direction: column;
     width: 360px;
     align-items: left;
+    justify-content: start;
 }
+
 
 .middle h1{
     font-weight: 400;
     font-size: 28px;
     line-height: 17px;
-    margin-bottom: 10px;
+    margin: 0;
 }
 .middle h2{
     color: #8B8B8B;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin: 0;
+   
 }
+
 .add-item{
     border-radius: 50%;
-    background-color: #FFFFFF;
     color: grey;
+    background-color: white;
     border: 1.5px solid #DEDEDE;
     height: 50px;
     width: 50px;
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
- 
+   
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 24px;
+    /* or 75% */
+    text-align: center;
+    color: #3C3C3C;
 }
+
 
 .divider{
     width: 508px;

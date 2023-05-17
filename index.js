@@ -6,8 +6,8 @@ function getFeedHtml(){
     menuArray.forEach(function(menu){
         feedHtml += `
         <section class="wrapper">
-      
-            <div class="image-item">${menu.emoji}</div>
+
+            <img class="image-item" src="${menu.emoji}">      
             <div class="middle">
                 <h1>${menu.name}</h1>
                 <h2>${menu.ingredients}</h2>
@@ -36,7 +36,8 @@ document.addEventListener('click', function(e){
 })
 
 function processOrder(){
-    if (menu.id === 0){
+    if (menu.id === 0){ 
+
         `<div>Pizza</div>`
 
 
