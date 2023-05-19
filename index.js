@@ -30,16 +30,24 @@ function render(){
 render()
 
 document.addEventListener('click', function(e){
-    document.getElementById('order-process').innerHTML= processOrder()
-  
+    document.innerHTML= processOrder()
+
+    
     
 })
 
+/*
+handle click on the + button 
+ */
 function processOrder(){
-    if (menu.id === 0){ 
+
+    console.log(`click-click`)
+    /* if (menu.id === 0){ 
 
         `<div>Pizza</div>`
 
-
-    }
+    } */
 }
+
+
+console.log('vypisujem sa')
