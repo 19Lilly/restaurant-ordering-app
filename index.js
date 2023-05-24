@@ -13,7 +13,7 @@ function getFeedHtml(){
                 <h2>${menu.ingredients}</h2>
                 <h1>$${menu.price}</h1>
             </div>
-            <button class="add-item" data-id="${menu.id}">+</button>
+            <button class="add-item" id="plus-button" data-id="${menu.id}">+</button>
 
         </section>
         <div class="divider"></div>`
@@ -29,25 +29,26 @@ function render(){
 
 render()
 
-document.addEventListener('click', function(e){
-    document.innerHTML= processOrder()
-
-    
-    
-})
+/* document.addEventListener('click', function(e){
+    document.innerHTML= processOrder() 
+}) */
 
 /*
 handle click on the + button 
  */
 function processOrder(){
+    document.getElementById('data-id').addEventListener('click', function(){
+        console.log('click-click')
+    })
+}
 
-    console.log(`click-click`)
     /* if (menu.id === 0){ 
 
         `<div>Pizza</div>`
 
     } */
-}
+
+    processOrder()
 
 
-console.log('vypisujem sa')
+
