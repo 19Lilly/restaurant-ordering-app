@@ -1,10 +1,11 @@
-import { menuArray } from "./data.js";
+'use strict';
+import { menuArray } from './data.js';
 
-function getFeedHtml(){
-    let feedHtml = ``
-    
-    menuArray.forEach(function(menu){
-        feedHtml += `
+function getFeedHtml() {
+  let feedHtml = ``;
+
+  menuArray.forEach(function (menu) {
+    feedHtml += `
         <section class="wrapper">
 
             <img class="image-item" src="${menu.emoji}">      
@@ -13,42 +14,47 @@ function getFeedHtml(){
                 <h2>${menu.ingredients}</h2>
                 <h1>$${menu.price}</h1>
             </div>
-            <button class="add-item" id="plus-button" data-id="${menu.id}">+</button>
+            <button class="add-item" id="id000${menu.id}">+</button>
 
         </section>
-        <div class="divider"></div>`
-    })
+        <div class="divider"></div>`;
+  });
 
-    return feedHtml
+  return feedHtml;
 }
 
-
-function render(){
-    document.getElementById('section-el').innerHTML = getFeedHtml()
+function render() {
+  document.getElementById('section-el').innerHTML = getFeedHtml();
 }
 
-render()
+render();
 
-/* document.addEventListener('click', function(e){
-    document.innerHTML= processOrder() 
-}) */
+function processOrder() {
+  let orderHtml = document.getElementById('order-process');
+  let orderTitleHtml = document.querySelector('.title');
+  let summaryEl = document.querySelector('.summary');
+  const addBtnAll = document.querySelectorAll('.add-item');
+  const removeBtn = document.querySelector('.remove-btn');
 
-/*
-handle click on the + button 
- */
-function processOrder(){
-    document.getElementById('data-id').addEventListener('click', function(){
-        console.log('click-click')
-    })
+  const orderDisplay = () => {
+    orderTitleHtml.classList.remove('hidden');
+    summaryEl.classList.remove('hidden');
+  };
+
+  let orderArr = new Array();
+  let totalPrice = 0;
+
+  for (let i = 0; i < addBtnAll.length; i++) {
+    addBtnAll[i].addEventListener('click', function () {
+      orderDisplay();
+      orderHtml.innerHTML += `
+        <div class="order-wrapper">
+        <p class="order-first">${menuArray[i].name}</p>
+        <button class="remove-btn order-second">remove</button>
+        <p class="order-third">${menuArray[i].price}$</p>
+        </div>`;
+    });
+  }
 }
 
-    /* if (menu.id === 0){ 
-
-        `<div>Pizza</div>`
-
-    } */
-
-    processOrder()
-
-
-
+processOrder();
