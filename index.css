@@ -118,10 +118,7 @@ header {
   grid-template-columns: 1fr 1fr 6fr;
 }
 
-.title {
+.order-title {
   display: flex;
   justify-content: center;
-}
-
-.summary {
 }
