@@ -114,11 +114,33 @@ header {
 }
 
 .order-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 6fr;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
 }
 
 .order-title {
   display: flex;
   justify-content: center;
+  font-size: 42px;
+}
+
+.remove-btn {
+  font-size: smaller;
+  text-transform: uppercase;
+  font-variant-position: sub;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 36px;
+}
+
+.total p {
+  align-self: self-end;
+  color: red;
 }

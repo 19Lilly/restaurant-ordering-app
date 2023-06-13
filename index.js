@@ -32,9 +32,8 @@ render();
 function processOrder() {
   let orderHtml = document.getElementById('order-process');
   let orderTitleHtml = document.querySelector('.title');
-  let summaryEl = document.querySelector('.summary');
+  let summaryEl = document.querySelector('#summary');
   const addBtnAll = document.querySelectorAll('.add-item');
-  const removeBtn = document.querySelector('.remove-btn');
 
   const orderDisplay = () => {
     orderTitleHtml.classList.remove('hidden');
@@ -42,6 +41,7 @@ function processOrder() {
   };
 
   const orderObj = {};
+  let prices = {};
 
   let totalPrice = 0;
 
@@ -49,56 +49,51 @@ function processOrder() {
     addBtnAll[i].addEventListener('click', function () {
       orderDisplay();
       orderObj[menuArray[i].name]
-        ? orderObj[menuArray[i].name]++
-        : (orderObj[menuArray[i].name] = 1);
+        ? (orderObj[menuArray[i].name][0]++,
+          (orderObj[menuArray[i].name][1] = menuArray[i].price))
+        : (orderObj[menuArray[i].name] = [1, menuArray[i].price]);
 
       console.log(orderObj);
+
+      const displayOrder = function () {
+        let html = ``;
+        Object.entries(orderObj).forEach(function ([name, [number, price]]) {
+          orderHtml.innerHTML = '';
+          summaryEl.innerHTML = '';
+          prices[name] = number * price;
+          html += `
+            <div class="order-wrapper">
+               <p class="order-first">${name}</p>
+               <button class="remove-btn order-second">remove</button>
+               <p class="order-third">${prices[name]}$</p>
+             </div>`;
+        });
+        console.log(Object.values(prices));
+        totalPrice = Object.values(prices).reduce((a, b) => a + b);
+        console.log(totalPrice);
+        let totalHtml = '';
+        totalHtml = `
+        <div class="total">
+          <h3>Total price:</h3>
+          <p>${totalPrice}$</p>
+        </div>`;
+
+        // Object.entries(prices).forEach(function ([name, item]) {
+        //   totalPrice = item;
+        // });
+        // Object.values(prices) = totalPrice;
+        // console.log(totalPrice);
+        //console.log(totalPrice);
+        orderHtml.insertAdjacentHTML('beforeend', html);
+        summaryEl.insertAdjacentHTML('afterbegin', totalHtml);
+      };
+
+      displayOrder();
     });
-
-    // const displayOrder = function (orderObj)
-
-    // const displayOrder = function (orderObj) {
-    //   orderHtml.innerHTML = '';
-
-    //   x.forEach(function (order){
-    //     const html = `<div class="order-wrapper">
-    //     // <p class="order-first">${menuArray[i].name}</p>
-    //     // <button class="remove-btn order-second">remove</button>
-    //     // <p class="order-third">${menuArray[i].price}$</p>
-    //     // </div>`
-    //   })
-    // };
-
-    //     orderHtml.innerHTML += `
-    // <div class="order-wrapper">
-    // <p class="order-first">${menuArray[i].name}</p>
-    // <button class="remove-btn order-second">remove</button>
-    // <p class="order-third">${menuArray[i].price}$</p>
-    // </div>`;
-
-    //     console.log(orderObj);
   }
 }
 
 processOrder();
 
-// const displayMovements = function (movements, sort = false) {
-//   containerMovements.innerHTML = '';
-
-//   const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
-
-//   movs.forEach(function (mov, i) {
-//     const type = mov > 0 ? 'deposit' : 'withdrawal';
-
-//     const html = `
-//       <div class="movements__row">
-//         <div class="movements__type movements__type--${type}">${
-//       i + 1
-//     } ${type}</div>
-//         <div class="movements__value">${mov}€</div>
-//       </div>
-//     `;
-
-//     containerMovements.insertAdjacentHTML('afterbegin', html);
-//   });
-// };
+const removeBtn = document.querySelectorAll('remove-btn');
+console.log(removeBtn);
