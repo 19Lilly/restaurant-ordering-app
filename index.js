@@ -78,12 +78,6 @@ function processOrder() {
           <p>${totalPrice}$</p>
         </div>`;
 
-        // Object.entries(prices).forEach(function ([name, item]) {
-        //   totalPrice = item;
-        // });
-        // Object.values(prices) = totalPrice;
-        // console.log(totalPrice);
-        //console.log(totalPrice);
         orderHtml.insertAdjacentHTML('beforeend', html);
         summaryEl.insertAdjacentHTML('afterbegin', totalHtml);
       };
