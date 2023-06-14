@@ -116,7 +116,7 @@ header {
 .order-wrapper {
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .order-title {
@@ -126,12 +126,12 @@ header {
 }
 
 .remove-btn {
-  font-size: smaller;
+  font-size: 55%;
+  color: #8b8b8b;
   text-transform: uppercase;
-  font-variant-position: sub;
+
   border: none;
   background: none;
-  text-align: left;
 }
 
 .total {
