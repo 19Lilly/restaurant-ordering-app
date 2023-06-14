@@ -63,8 +63,7 @@ function processOrder() {
           prices[name] = number * price;
           html += `
             <div class="order-wrapper">
-               <p class="order-first">${name}</p>
-               <button class="remove-btn order-second">remove</button>
+               <p class="order-first">${name}<button class="remove-btn order-second">remove</button></p>
                <p class="order-third">${prices[name]}$</p>
              </div>`;
         });
