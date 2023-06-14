@@ -76,10 +76,13 @@ function processOrder() {
         //console.log(totalPrice);
         let totalHtml = '';
         totalHtml = `
-        <div class="total">
+        
+        <div class="divider-total"></div>
+        <div class="total total-wrapper">
           <h3>Total price:</h3>
           <p>${totalPrice}$</p>
-        </div>`;
+        </div>
+        <button class="comlete-order-btn wrapper">Complete Order</button>`;
 
         orderHtml.insertAdjacentHTML('beforeend', html);
         summaryEl.insertAdjacentHTML('afterbegin', totalHtml);

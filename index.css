@@ -43,12 +43,17 @@ header {
   width: 600px;
 }
 
-.wrapper {
+.wrapper,
+.order-wrapper,
+.total-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   width: 508px;
   margin: 0 auto;
+}
+
+.wrapper {
+  gap: 20px;
   padding: 25px;
 }
 
@@ -97,11 +102,17 @@ header {
   color: #3c3c3c;
 }
 
-.divider {
+.divider,
+.divider-total {
   width: 508px;
   margin: 0 auto;
   height: 2px;
   background-color: #d2d2d2;
+}
+
+.divider-total {
+  background-color: #393333;
+  margin-top: 15px;
 }
 
 .order {
@@ -113,22 +124,61 @@ header {
   display: none;
 }
 
-.order-wrapper {
-  display: flex;
-  justify-content: space-between;
-  font-size: 36px;
-}
-
 .order-title {
   display: flex;
+  margin: 0 auto;
+  padding: 50px;
+  width: 508px;
   justify-content: center;
-  font-size: 42px;
+  font-family: 'Smythe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
+  /* identical to box height, or 60% */
+
+  color: #000000;
+}
+
+.order-first {
+  margin: 0px;
+  padding: 10px;
+  font-family: 'Smythe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
+  /* identical to box height, or 60% */
+
+  color: #000000;
+}
+
+.order-second {
+  margin: 0px;
+  padding: 10px;
+  font-family: 'Smythe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  text-align: right;
+
+  color: #000000;
 }
 
 .remove-btn {
-  font-size: 55%;
-  color: #8b8b8b;
-  text-transform: uppercase;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  /* or 200% */
+
+  color: #bbbbbb;
+
+  text-transform: lowercase;
 
   border: none;
   background: none;
@@ -137,10 +187,43 @@ header {
 .total {
   display: flex;
   justify-content: space-between;
-  font-size: 32px;
+  font-family: 'Smythe';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* identical to box height, or 86% */
+
+  color: #0e0e0e;
+}
+
+.total h3 {
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .total p {
-  align-self: self-end;
-  color: red;
+  font-size: 20px;
+  line-height: 24px;
+  padding-right: 10px;
+
+  /* identical to box height, or 120% */
+
+  text-align: right;
+}
+
+.comlete-order-btn {
+  display: block;
+
+  margin-top: 35px;
+  border: none;
+  padding: 15px;
+  background: #16db99;
+  color: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
 }
