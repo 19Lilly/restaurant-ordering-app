@@ -34,6 +34,7 @@ function processOrder() {
   let orderTitleHtml = document.querySelector('.title');
   let summaryEl = document.querySelector('#summary');
   const addBtnAll = document.querySelectorAll('.add-item');
+  console.log(addBtnAll);
 
   const orderDisplay = () => {
     orderTitleHtml.classList.remove('hidden');
@@ -67,9 +68,12 @@ function processOrder() {
                <p class="order-second">${prices[name]}$</p>
              </div>`;
         });
-        console.log(Object.values(prices));
+
+        const removeBtn = document.querySelectorAll('.remove-btn');
+        console.log(removeBtn);
+        //console.log(Object.values(prices));
         totalPrice = Object.values(prices).reduce((a, b) => a + b);
-        console.log(totalPrice);
+        //console.log(totalPrice);
         let totalHtml = '';
         totalHtml = `
         <div class="total">
@@ -87,6 +91,3 @@ function processOrder() {
 }
 
 processOrder();
-
-const removeBtn = document.querySelectorAll('remove-btn');
-console.log(removeBtn);
