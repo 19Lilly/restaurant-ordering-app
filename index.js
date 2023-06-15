@@ -63,7 +63,7 @@ function processOrder() {
           prices[name] = number * price;
           html += `
             <div class="order-wrapper">
-               <p class="order-first">${name}<button class="remove-btn">remove</button></p>
+               <p class="order-first">${name}<button data-remove${} class="remove-btn">remove</button></p>
                <p class="order-second">${prices[name]}$</p>
              </div>`;
         });
@@ -93,7 +93,7 @@ function processOrder() {
       displayOrder();
 
       orderHtml.addEventListener('click', event => {
-        if (event.target.className === 'remove-btn') {
+        if (event.target.dataset.remove) {
           console.log('Click!');
         }
       });
