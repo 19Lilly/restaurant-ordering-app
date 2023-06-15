@@ -34,7 +34,6 @@ function processOrder() {
   let orderTitleHtml = document.querySelector('.title');
   let summaryEl = document.querySelector('#summary');
   const addBtnAll = document.querySelectorAll('.add-item');
-  console.log(addBtnAll);
 
   const orderDisplay = () => {
     orderTitleHtml.classList.remove('hidden');
@@ -69,26 +68,41 @@ function processOrder() {
              </div>`;
         });
 
-        const removeBtn = document.querySelectorAll('.remove-btn');
-        console.log(removeBtn);
         //console.log(Object.values(prices));
         totalPrice = Object.values(prices).reduce((a, b) => a + b);
         //console.log(totalPrice);
-        let totalHtml = '';
-        totalHtml = `
-        
-        <div class="divider-total"></div>
-        <div class="total total-wrapper">
-          <h3>Total price:</h3>
-          <p>${totalPrice}$</p>
-        </div>
-        <button class="comlete-order-btn wrapper">Complete Order</button>`;
 
-        orderHtml.insertAdjacentHTML('beforeend', html);
-        summaryEl.insertAdjacentHTML('afterbegin', totalHtml);
+        orderHtml.innerHTML = html;
+        const displayTotal = function () {
+          summaryEl.innerHTML = '';
+          let totalHtml = '';
+          totalHtml = `
+          
+          <div class="divider-total"></div>
+          <div class="total total-wrapper">
+            <h3>Total price:</h3>
+            <p>${totalPrice}$</p>
+          </div>
+          <button class="complete-order-btn wrapper" id="complete-order-btn">Complete Order</button>`;
+
+          summaryEl.innerHTML = totalHtml;
+        };
+        displayTotal();
       };
 
       displayOrder();
+
+      orderHtml.addEventListener('click', event => {
+        if (event.target.className === 'remove-btn') {
+          console.log('Click!');
+        }
+      });
+
+      summaryEl.addEventListener('click', event => {
+        if (event.target.id === 'complete-order-btn') {
+          console.log('click, click, click');
+        }
+      });
     });
   }
 }
