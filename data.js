@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
 export const menuArray = [
   {
     name: 'Pizza',
@@ -5,6 +7,7 @@ export const menuArray = [
     price: 14,
     emoji: 'images/item graphic pizza.png',
     id: 1,
+    uuid: uuidv4(),
   },
   {
     name: 'Hamburger',
@@ -12,6 +15,7 @@ export const menuArray = [
     price: 12,
     emoji: 'images/item graphic hamburger.png',
     id: 2,
+    uuid: uuidv4(),
   },
   {
     name: 'Beer',
@@ -19,5 +23,6 @@ export const menuArray = [
     price: 13,
     emoji: 'images/item graphic beer.png',
     id: 3,
+    uuid: uuidv4(),
   },
 ];
