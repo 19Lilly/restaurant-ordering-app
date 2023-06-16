@@ -14,7 +14,7 @@ function getFeedHtml() {
                 <h2>${menu.ingredients}</h2>
                 <h1>$${menu.price}</h1>
             </div>
-            <button class="add-item" id="id000${menu.id}">+</button>
+            <button class="add-item" data-add-btn="${menu.uuid}">+</button>
 
         </section>
         <div class="divider"></div>`;
@@ -29,7 +29,50 @@ function render() {
 
 render();
 
-function processOrder() {
+let orderHtml = document.getElementById('order-process');
+let orderTitleHtml = document.querySelector('.title');
+let summaryEl = document.querySelector('#summary');
+
+document.addEventListener('click', function (e) {
+  if (e.target.dataset.addBtn) {
+    handleAddBtnClick(e.target.dataset.addBtn);
+    //handleRemoveBtnClick
+    //render order process Html
+  }
+});
+
+function handleAddBtnClick(addBtnId) {
+  //console.log(addBtnId);
+
+  const targetAddBtn = menuArray.filter(function (menuItem) {
+    return menuItem.uuid === addBtnId;
+  })[0];
+
+  targetAddBtn.numberOrdered++;
+  orderDisplay();
+  orderProcess();
+}
+
+const orderDisplay = () => {
+  orderTitleHtml.classList.remove('hidden');
+};
+
+const orderProcess = function () {
+  orderHtml.innerHTML = ``;
+  menuArray.forEach(function (menu) {
+    if (menu.numberOrdered > 0) {
+      orderHtml.innerHTML += `
+    <div class="order-wrapper">
+        <p class="order-first">${menu.name}<button data-remove=${
+        menu.uuid
+      } class="remove-btn">remove</button></p>
+        <p class="order-second">${menu.price * menu.numberOrdered}$</p>
+    </div>`;
+    }
+  });
+};
+
+/* function processOrder() {
   let orderHtml = document.getElementById('order-process');
   let orderTitleHtml = document.querySelector('.title');
   let summaryEl = document.querySelector('#summary');
@@ -40,7 +83,7 @@ function processOrder() {
     summaryEl.classList.remove('hidden');
   };
 
-  const orderObj = {};
+  let orderObj = {};
   let prices = {};
 
   let totalPrice = 0;
@@ -63,9 +106,15 @@ function processOrder() {
           prices[name] = number * price;
           html += `
             <div class="order-wrapper">
-               <p class="order-first">${name}<button class="remove-btn">remove</button></p>
+               <p class="order-first">${name}<button data-remove=${menuArray.uuid} class="remove-btn">remove</button></p>
                <p class="order-second">${prices[name]}$</p>
              </div>`;
+          orderHtml.addEventListener('click', event => {
+            // if (event.target.dataset) {
+            //   console.log('a teraz co? To este musis vymysliet');
+            // }
+            console.log(event.target.dataset.remove);
+          });
         });
 
         //console.log(Object.values(prices));
@@ -92,12 +141,6 @@ function processOrder() {
 
       displayOrder();
 
-      orderHtml.addEventListener('click', event => {
-        if (event.target.className === 'remove-btn') {
-          console.log('Click!');
-        }
-      });
-
       summaryEl.addEventListener('click', event => {
         if (event.target.id === 'complete-order-btn') {
           console.log('click, click, click');
@@ -108,3 +151,4 @@ function processOrder() {
 }
 
 processOrder();
+ */
