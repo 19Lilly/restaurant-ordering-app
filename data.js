@@ -7,6 +7,7 @@ export const menuArray = [
     price: 14,
     emoji: 'images/item graphic pizza.png',
     id: 1,
+    numberOrdered: 0,
     uuid: uuidv4(),
   },
   {
@@ -15,6 +16,7 @@ export const menuArray = [
     price: 12,
     emoji: 'images/item graphic hamburger.png',
     id: 2,
+    numberOrdered: 0,
     uuid: uuidv4(),
   },
   {
@@ -23,6 +25,7 @@ export const menuArray = [
     price: 13,
     emoji: 'images/item graphic beer.png',
     id: 3,
+    numberOrdered: 0,
     uuid: uuidv4(),
   },
 ];
