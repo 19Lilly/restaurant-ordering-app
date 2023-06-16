@@ -46,7 +46,10 @@ document.addEventListener('click', function (e) {
     handleCompleteOrderBtnClick(e.target.dataset.completeOrder);
   else if (e.target.dataset.closeModal)
     handleCloseModalBtnClick(e.target.dataset.closeModal);
+  else if (e.target.dataset.pay) handlePayBtnclick(e.target.dataset.pay);
 });
+
+//Add and Remove btns
 
 function handleAddBtnClick(addBtnId) {
   const targetAddBtn = menuArray.filter(function (menuItem) {
@@ -66,10 +69,12 @@ function handleRemoveBtnClick(removeBtnId) {
   orderProcess();
 }
 
+//complete order btn
 function handleCompleteOrderBtnClick() {
   openModal();
 }
 
+//close payment Modal
 function handleCloseModalBtnClick() {
   closeModal();
 }
@@ -90,6 +95,19 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
+//pay btn
+function handlePayBtnclick() {
+  console.log('all done');
+  closeModal();
+  const buyerName = document.getElementById('buyer-name').value;
+  orderTitleHtml.classList.add('hidden');
+  orderHtml.innerHTML = '';
+  summaryEl.innerHTML = '';
+  orderHtml.innerHTML = `
+  <div class="thank-you-message">Thanks, ${buyerName}! Your order is on its way!</div>`;
+}
+
+//display ordered items in html
 const orderDisplay = () => {
   orderTitleHtml.classList.remove('hidden');
 };

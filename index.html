@@ -39,12 +39,18 @@
           &times;
         </button>
         <h3>Enter card details</h3>
-        <input type="text" placeholder="Enter your name" required />
+        <input
+          type="text"
+          id="buyer-name"
+          placeholder="Enter your name"
+          required
+        />
         <input type="text" placeholder="Enter card number" required />
         <input type="text" placeholder="Enter CVV" required />
-        <button class="pay-btn">Pay</button>
+        <button class="pay-btn" data-pay="pay">Pay</button>
       </section>
     </section>
+
     <section class="hidden overlay"></section>
 
     <script type="module" src="index.js"></script>
