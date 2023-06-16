@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: 0;
   width: 600px;
   margin: 0px auto;
@@ -220,7 +221,6 @@ header {
   border: none;
   padding: 15px;
   background: #16db99;
-  color: #ffffff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 3px;
   font-family: 'Verdana';
@@ -228,4 +228,73 @@ header {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #ffffff;
+}
+
+.pay-btn {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+  /* or 156% */
+
+  color: #ffffff;
+}
+
+.payment-modal {
+  padding: 20px;
+  background-color: white;
+  width: 524px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+input {
+  border: 1.29664px solid #757575;
+  border-radius: 3.88991px;
+  padding: 15px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  /* or 156% */
+
+  color: #757575;
+}
+
+.payment-modal h3 {
+  background: #ffffff;
+  border-radius: 3.88991px;
+  text-align: center;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  /* or 130% */
+
+  color: #000000;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.35);
+  backdrop-filter: blur(0.5px);
+  z-index: 5;
 }

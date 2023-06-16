@@ -32,6 +32,8 @@ render();
 
 //handle add/remove btn, display processed order in html
 const orderHtml = document.getElementById('order-process');
+const paymentModal = document.querySelector('.payment');
+const overlay = document.querySelector('.overlay');
 const orderTitleHtml = document.querySelector('.title');
 const summaryEl = document.querySelector('#summary');
 
@@ -62,7 +64,10 @@ function handleRemoveBtnClick(removeBtnId) {
   orderProcess();
 }
 
-//function handleCompleteOrderBtnClick() {}
+function handleCompleteOrderBtnClick() {
+  paymentModal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+}
 
 const orderDisplay = () => {
   orderTitleHtml.classList.remove('hidden');
