@@ -44,6 +44,8 @@ document.addEventListener('click', function (e) {
     handleRemoveBtnClick(e.target.dataset.removeBtn);
   } else if (e.target.dataset.completeOrder)
     handleCompleteOrderBtnClick(e.target.dataset.completeOrder);
+  else if (e.target.dataset.closeModal)
+    handleCloseModalBtnClick(e.target.dataset.closeModal);
 });
 
 function handleAddBtnClick(addBtnId) {
@@ -65,9 +67,28 @@ function handleRemoveBtnClick(removeBtnId) {
 }
 
 function handleCompleteOrderBtnClick() {
+  openModal();
+}
+
+function handleCloseModalBtnClick() {
+  closeModal();
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !paymentModal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
+
+const openModal = function () {
   paymentModal.classList.remove('hidden');
   overlay.classList.remove('hidden');
-}
+};
+
+const closeModal = function () {
+  paymentModal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
 
 const orderDisplay = () => {
   orderTitleHtml.classList.remove('hidden');
