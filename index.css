@@ -298,3 +298,14 @@ input {
   backdrop-filter: blur(0.5px);
   z-index: 5;
 }
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
