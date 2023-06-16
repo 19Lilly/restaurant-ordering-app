@@ -93,6 +93,7 @@ const openModal = function () {
 const closeModal = function () {
   paymentModal.classList.add('hidden');
   overlay.classList.add('hidden');
+  event.preventDefault();
 };
 
 //pay btn
