@@ -1,6 +1,7 @@
 'use strict';
 import { menuArray } from './data.js';
 
+//render restaurant menu
 function getFeedHtml() {
   let feedHtml = ``;
 
@@ -29,6 +30,7 @@ function render() {
 
 render();
 
+//handle add/remove btn, display processed order in html
 const orderHtml = document.getElementById('order-process');
 const orderTitleHtml = document.querySelector('.title');
 const summaryEl = document.querySelector('#summary');
@@ -36,10 +38,10 @@ const summaryEl = document.querySelector('#summary');
 document.addEventListener('click', function (e) {
   if (e.target.dataset.addBtn) {
     handleAddBtnClick(e.target.dataset.addBtn);
-  }
-  if (e.target.dataset.removeBtn) {
+  } else if (e.target.dataset.removeBtn) {
     handleRemoveBtnClick(e.target.dataset.removeBtn);
-  }
+  } else if (e.target.dataset.completeOrder)
+    handleCompleteOrderBtnClick(e.target.dataset.completeOrder);
 });
 
 function handleAddBtnClick(addBtnId) {
@@ -59,6 +61,8 @@ function handleRemoveBtnClick(removeBtnId) {
   targetRemoveBtn.numberOrdered--;
   orderProcess();
 }
+
+function handleCompleteOrderBtnClick() {}
 
 const orderDisplay = () => {
   orderTitleHtml.classList.remove('hidden');
@@ -87,7 +91,7 @@ const orderProcess = function () {
     <h3>Total price:</h3>
     <p>${totalPrice}$</p>
   </div>
-  <button class="complete-order-btn wrapper" id="complete-order-btn">Complete Order</button>`;
+  <button class="complete-order-btn wrapper" data-complete-order="complete-order">Complete Order</button>`;
 
   if (totalPrice === 0) {
     orderTitleHtml.classList.add('hidden');
