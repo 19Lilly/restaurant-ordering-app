@@ -43,8 +43,6 @@ document.addEventListener('click', function (e) {
 });
 
 function handleAddBtnClick(addBtnId) {
-  //console.log(addBtnId);
-
   const targetAddBtn = menuArray.filter(function (menuItem) {
     return menuItem.uuid === addBtnId;
   })[0];
