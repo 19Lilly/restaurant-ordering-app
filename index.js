@@ -108,6 +108,14 @@ function handlePayBtnclick() {
   menuArray.forEach(function (menu) {
     menu.numberOrdered = 0;
   });
+  clearAllInputs();
+}
+
+//clear input fields
+
+function clearAllInputs(event) {
+  let allInputs = document.querySelectorAll('input');
+  allInputs.forEach(singleInput => (singleInput.value = ''));
 }
 
 //display ordered items in html
