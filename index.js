@@ -32,7 +32,7 @@ render();
 
 //handle add/remove btn, display processed order in html
 const orderHtml = document.getElementById('order-process');
-const paymentModal = document.querySelector('.payment');
+const paymentModal = document.querySelector('form');
 const overlay = document.querySelector('.overlay');
 const orderTitleHtml = document.querySelector('.title');
 const summaryEl = document.querySelector('#summary');

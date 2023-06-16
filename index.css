@@ -254,7 +254,6 @@ small {
   color: #ffffff;
 }
 
-.payment-modal,
 form {
   padding: 20px;
   background-color: white;
@@ -284,7 +283,7 @@ input {
   color: #757575;
 }
 
-.payment-modal h3 {
+form h3 {
   background: #ffffff;
   border-radius: 3.88991px;
   text-align: center;

@@ -26,40 +26,36 @@
       <h2>The best burgers and pizzas in town.</h2>
     </header>
 
-    <section id="section-el"></section>
-    <section class="title hidden">
-      <h1 class="order-title">Your order</h1>
-    </section>
-    <section id="order-process"></section>
-    <section id="summary"></section>
-
-    <section class="payment hidden">
-      <section class="payment-modal">
-        <form>
-          <button class="close-modal-btn" data-close-Modal="close-Modal">
-            &times;
-          </button>
-          <h3>Enter card details</h3>
-
-          <input
-            type="text"
-            id="buyer-name"
-            name="buyerName"
-            placeholder="Enter your name"
-          />
-          <input
-            type="text"
-            placeholder="Enter card number"
-            name="cardNumber"
-          />
-          <input type="text" placeholder="Enter CVV" name="CVV" />
-
-          <button type="submit" class="pay-btn" name="pay" data-pay="pay">
-            Pay
-          </button>
-        </form>
+    <main>
+      <section id="section-el"></section>
+      <section class="title hidden">
+        <h1 class="order-title">Your order</h1>
       </section>
-    </section>
+      <section id="order-process"></section>
+      <section id="summary"></section>
+    </main>
+
+    <!-- modal html -->
+
+    <form action="" class="hidden">
+      <button class="close-modal-btn" data-close-Modal="close-Modal">
+        &times;
+      </button>
+      <h3>Enter card details</h3>
+
+      <input
+        type="text"
+        id="buyer-name"
+        placeholder="Enter your name"
+        required
+      />
+      <input type="text" placeholder="Enter card number" required />
+      <input type="text" placeholder="Enter CVV" required />
+
+      <button type="submit" class="pay-btn" name="pay" data-pay="pay">
+        Pay
+      </button>
+    </form>
 
     <section class="hidden overlay"></section>
 
