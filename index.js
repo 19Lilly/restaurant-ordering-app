@@ -98,7 +98,6 @@ const closeModal = function () {
 
 //pay btn
 function handlePayBtnclick() {
-  console.log('all done');
   closeModal();
   const buyerName = document.getElementById('buyer-name').value;
   orderTitleHtml.classList.add('hidden');
@@ -111,7 +110,6 @@ function handlePayBtnclick() {
   });
   event.preventDefault();
   clearAllInputs();
-  console.log(menuArray);
 }
 
 //clear input fields
