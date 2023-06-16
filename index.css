@@ -74,7 +74,6 @@ header {
   display: flex;
   flex-direction: column;
   width: 360px;
-  align-items: left;
   justify-content: start;
 }
 
