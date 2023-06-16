@@ -108,7 +108,9 @@ function handlePayBtnclick() {
   menuArray.forEach(function (menu) {
     menu.numberOrdered = 0;
   });
+  event.preventDefault();
   clearAllInputs();
+  console.log(menuArray);
 }
 
 //clear input fields
