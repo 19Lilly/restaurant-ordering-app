@@ -212,7 +212,8 @@ header {
   text-align: right;
 }
 
-.complete-order-btn {
+.complete-order-btn,
+.pay-btn {
   display: block;
 
   margin-top: 35px;
