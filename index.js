@@ -62,7 +62,7 @@ function handleRemoveBtnClick(removeBtnId) {
   orderProcess();
 }
 
-function handleCompleteOrderBtnClick() {}
+//function handleCompleteOrderBtnClick() {}
 
 const orderDisplay = () => {
   orderTitleHtml.classList.remove('hidden');
