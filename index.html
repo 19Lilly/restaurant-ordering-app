@@ -39,23 +39,26 @@
           &times;
         </button>
         <h3>Enter card details</h3>
-        <input
-          type="text"
-          id="buyer-name"
-          name="buyer-name"
-          placeholder="Enter your name"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Enter card number"
-          name="card-number"
-          required
-        />
-        <input type="text" placeholder="Enter CVV" name="CVV" required />
-        <button type="submit" class="pay-btn" name="pay" data-pay="pay">
-          Pay
-        </button>
+        <form>
+          <input
+            type="text"
+            id="buyer-name"
+            name="buyer-name"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Enter card number"
+            name="card-number"
+            required
+          />
+          <input type="text" placeholder="Enter CVV" name="CVV" required />
+
+          <button type="submit" class="pay-btn" name="pay" data-pay="pay">
+            Pay
+          </button>
+        </form>
       </section>
     </section>
 

@@ -105,6 +105,9 @@ function handlePayBtnclick() {
   summaryEl.innerHTML = '';
   orderHtml.innerHTML = `
   <div class="thank-you-message">Thanks, ${buyerName}! Your order is on its way!</div>`;
+  menuArray.forEach(function (menu) {
+    menu.numberOrdered = 0;
+  });
 }
 
 //display ordered items in html

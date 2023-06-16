@@ -255,7 +255,8 @@ small {
   color: #ffffff;
 }
 
-.payment-modal {
+.payment-modal,
+form {
   padding: 20px;
   background-color: white;
   width: 524px;
