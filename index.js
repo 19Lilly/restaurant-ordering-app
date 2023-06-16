@@ -108,6 +108,7 @@ function handlePayBtnclick() {
   menuArray.forEach(function (menu) {
     menu.numberOrdered = 0;
   });
+  buyerName = '';
 }
 
 //display ordered items in html
