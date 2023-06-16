@@ -175,7 +175,8 @@ header {
   color: #000000;
 }
 
-.remove-btn {
+.remove-btn,
+small {
   font-family: 'Verdana';
   font-style: normal;
   font-weight: 400;
@@ -189,6 +190,10 @@ header {
 
   border: none;
   background: none;
+}
+
+small {
+  margin-right: 7px;
 }
 
 .total {

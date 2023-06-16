@@ -123,7 +123,9 @@ const orderProcess = function () {
         <p class="order-first">${menu.name}<button data-remove=${
         menu.uuid
       } class="remove-btn" data-remove-btn ="${menu.uuid}">remove</button></p>
-        <p class="order-second">${menu.price * menu.numberOrdered}$</p>
+        <p class="order-second"><small>${menu.numberOrdered}x</small>${
+        menu.price * menu.numberOrdered
+      }$</p>
     </div>`;
     }
 
