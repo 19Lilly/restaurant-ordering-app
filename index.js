@@ -112,7 +112,6 @@ function handlePayBtnclick() {
 }
 
 //clear input fields
-
 function clearAllInputs(event) {
   let allInputs = document.querySelectorAll('input');
   allInputs.forEach(singleInput => (singleInput.value = ''));
