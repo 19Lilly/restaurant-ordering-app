@@ -7,19 +7,17 @@
 body {
   position: relative;
   margin: 0;
-  width: 600px;
-  margin: 0px auto;
+  width: 37.5rem;
+  margin: 0rem auto;
   font-family: 'Smythe', cursive;
-  font-style: normal;
   font-weight: 400;
-  /* font-family: 'Inter', sans-serif; */
+  font-style: normal;
 }
 
 header h1 {
-  font-size: 39px;
-  line-height: 24px;
+  font-size: 39.008px;
+  line-height: 62%;
   /* identical to box height, or 62% */
-  font-style: normal;
   font-weight: 400;
   position: absolute;
   color: #ffffff;
@@ -42,12 +40,12 @@ header h2 {
 
 header {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .banner {
-  height: 170px;
-  width: 600px;
+  height: 10.625rem;
+  width: 37.5rem;
 }
 
 .wrapper,
@@ -55,54 +53,54 @@ header {
 .total-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 508px;
+  width: 31.75rem;
   margin: 0 auto;
 }
 
 .wrapper {
-  gap: 20px;
-  padding: 25px;
+  gap: 1.25rem;
+  padding: 1.563rem;
 }
 
 .image-item {
   display: flex;
   align-items: center;
-  padding-right: 10px;
+  padding-right: 0.625rem;
 }
 
 .middle {
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 22.5rem;
   justify-content: start;
 }
 
 .middle h1 {
   font-weight: 400;
-  font-size: 28px;
-  line-height: 17px;
+  font-size: 1.75rem;
+  line-height: 1.063rem;
   margin: 0;
 }
 .middle h2 {
   color: #8b8b8b;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .add-item {
   border-radius: 50%;
   color: grey;
   background-color: white;
-  border: 1.5px solid #dedede;
-  height: 50px;
-  width: 50px;
+  border: 0.094rem solid #dedede;
+  height: 3.125rem;
+  width: 3.125rem;
 
   font-family: 'Inter';
   font-style: normal;
   font-weight: 200;
-  font-size: 32px;
-  line-height: 24px;
+  font-size: 2rem;
+  line-height: 1.5rem;
   /* or 75% */
   text-align: center;
   color: #3c3c3c;
@@ -110,15 +108,15 @@ header {
 
 .divider,
 .divider-total {
-  width: 508px;
+  width: 31.75rem;
   margin: 0 auto;
-  height: 2px;
+  height: 0.125rem;
   background-color: #d2d2d2;
 }
 
 .divider-total {
   background-color: #393333;
-  margin-top: 15px;
+  margin-top: 0.938rem;
 }
 
 .order {
@@ -133,44 +131,35 @@ header {
 .order-title {
   display: flex;
   margin: 0 auto;
-  padding: 50px;
-  width: 508px;
+  padding: 3.125rem;
+  width: 31.75rem;
   justify-content: center;
-  font-family: 'Smythe';
-  font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 17px;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 60%;
   /* identical to box height, or 60% */
 
   color: #000000;
 }
 
 .order-first {
-  margin: 0px;
-  padding: 10px;
-  font-family: 'Smythe';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 17px;
+  margin: 0rem;
+  padding: 0.625rem;
+  font-size: 1.75rem;
+  line-height: 60%;
   /* identical to box height, or 60% */
 
   color: #000000;
 }
 
 .order-second {
-  margin: 0px;
-  padding: 10px;
-  font-family: 'Smythe';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  margin: 0rem;
+  padding: 0.625rem;
+  font-size: 1.25rem;
+  line-height: 120%;
   /* identical to box height, or 120% */
-
   text-align: right;
-
   color: #000000;
 }
 
@@ -179,44 +168,38 @@ small {
   font-family: 'Verdana';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 24px;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
   /* or 200% */
 
   color: #bbbbbb;
-
   text-transform: lowercase;
-
   border: none;
   background: none;
 }
 
 small {
-  margin-right: 7px;
+  margin-right: 0.438rem;
 }
 
 .total {
   display: flex;
   justify-content: space-between;
-  font-family: 'Smythe';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+  line-height: 86%;
   /* identical to box height, or 86% */
-
   color: #0e0e0e;
 }
 
 .total h3 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
-  padding-left: 10px;
+  padding-left: 0.625rem;
 }
 
 .total p {
-  font-size: 20px;
-  line-height: 24px;
-  padding-right: 10px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-right: 0.625rem;
 
   /* identical to box height, or 120% */
 
@@ -226,43 +209,39 @@ small {
 .complete-order-btn,
 .pay-btn {
   display: block;
-
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 2.188rem;
+  margin-bottom: 2.188rem;
   border: none;
-  padding: 15px;
+  padding: 0.938rem;
   background: #16db99;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  border-radius: 3px;
+  box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.188rem;
   font-family: 'Verdana';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 150%;
   /* identical to box height, or 150% */
-
   color: #ffffff;
 }
 
 .pay-btn {
-  font-family: 'Verdana';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 31px;
+  font-size: 1.25rem;
+  line-height: 156%;
   /* or 156% */
-
   color: #ffffff;
 }
 
 form {
-  padding: 20px;
+  font-family: 'Verdana';
+  font-style: normal;
+  padding: 1.25rem;
   background-color: white;
-  width: 524px;
+  width: 32.75rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.938rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -271,28 +250,23 @@ form {
 }
 
 input {
-  border: 1.29664px solid #757575;
-  border-radius: 3.88991px;
-  padding: 15px;
-  font-family: 'Verdana';
-  font-style: normal;
+  border: 1.296px solid #757575;
+  border-radius: 3.888px;
+  padding: 0.938rem;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 31px;
+  font-size: 1.25rem;
+  line-height: 156%;
   /* or 156% */
-
   color: #757575;
 }
 
 form h3 {
   background: #ffffff;
-  border-radius: 3.88991px;
+  border-radius: 0.243rem;
   text-align: center;
-  font-family: 'Verdana';
-  font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 1.5rem;
+  line-height: 130%;
   /* or 130% */
 
   color: #000000;
@@ -306,34 +280,31 @@ form h3 {
   width: 100%;
   height: 100%;
   background-color: rgba(245, 245, 245, 0.35);
-  backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.031rem);
   z-index: 5;
 }
 
 .close-modal-btn {
   position: absolute;
-  top: 0;
+  top: 1.5rem;
   right: 1.2rem;
-  font-size: 5rem;
+  font-size: 3rem;
   color: #333;
-
   cursor: pointer;
   border: none;
   background: none;
 }
 
 .thank-you-message {
-  width: 504px;
+  width: 31.5rem;
   background: #ecfdf5;
-  border-radius: 3px;
-  margin: 50px auto;
-  padding: 50px;
+  border-radius: 0.188rem;
+  margin: 3.125rem auto;
+  padding: 3.125rem;
   text-align: center;
-  font-family: 'Smythe';
-  font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 2rem;
+  line-height: 52%;
   /* identical to box height, or 52% */
 
   color: #065f46;
