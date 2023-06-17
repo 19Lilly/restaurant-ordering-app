@@ -46,7 +46,10 @@ document.addEventListener('click', function (e) {
     handleCompleteOrderBtnClick(e.target.dataset.completeOrder);
   else if (e.target.dataset.closeModal)
     handleCloseModalBtnClick(e.target.dataset.closeModal);
-  else if (e.target.dataset.pay) handlePayBtnclick(e.target.dataset.pay);
+});
+
+document.addEventListener('submit', function (e) {
+  if (e.target.dataset.pay) return e.target.dataset.pay;
 });
 
 //Add and Remove btns
@@ -97,7 +100,8 @@ const closeModal = function () {
 };
 
 //pay btn
-function handlePayBtnclick() {
+
+paymentModal.onsubmit = function () {
   closeModal();
   const buyerName = document.getElementById('buyer-name').value;
   orderTitleHtml.classList.add('hidden');
@@ -110,7 +114,7 @@ function handlePayBtnclick() {
   });
   event.preventDefault();
   clearAllInputs();
-}
+};
 
 //clear input fields
 function clearAllInputs(event) {
