@@ -42,15 +42,49 @@
         &times;
       </button>
       <h3>Enter card details</h3>
-
-      <input
-        type="text"
-        id="buyer-name"
-        placeholder="Enter your name"
-        required
-      />
-      <input type="text" placeholder="Enter card number" required />
-      <input type="text" placeholder="Enter CVV" required />
+      <label for="buyer-name">
+        <span>Your name</span>
+        <input
+          type="text"
+          id="buyer-name"
+          pattern="[a-zA-Z][a-zA-Z\s]+"
+          placeholder="Enter your name"
+          required
+          title="Only letters (and spaces) are allowed!"
+          oninvalid="this.setCustomValidity('Enter your name, please!')"
+          oninput="setCustomValidity('')"
+        />
+      </label>
+      <label for="card-number">
+        <span>Card number</span>
+        <input
+          type="text"
+          id="card-number"
+          pattern="\d*"
+          minlength="16"
+          maxlength="19"
+          placeholder="Enter card number"
+          required
+          title="16-19 digits. Only digits are allowed! (no spaces)"
+          oninvalid="this.setCustomValidity('Enter your card number, please!')"
+          oninput="setCustomValidity('')"
+        />
+      </label>
+      <label for="CVV">
+        <span>CVV</span>
+        <input
+          type="text"
+          id="CVV"
+          pattern="\d*"
+          minlength="3"
+          maxlength="3"
+          placeholder="Enter CVV"
+          required
+          title="The CVV code is on the back of your credit/debit card. Only digits are allowed!"
+          oninvalid="this.setCustomValidity('Enter your card CVV, please!')"
+          oninput="setCustomValidity('')"
+        />
+      </label>
 
       <button type="submit" class="pay-btn" name="pay" data-pay="pay">
         Pay

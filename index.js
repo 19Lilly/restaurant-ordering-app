@@ -7,10 +7,10 @@ function getFeedHtml() {
 
   menuArray.forEach(function (menu) {
     feedHtml += `
-        <section class="wrapper">
+        <section class="menu-item-wrapper">
 
             <img class="image-item" src="${menu.emoji}">      
-            <div class="middle">
+            <div class="menu-item">
                 <h1>${menu.name}</h1>
                 <h2>${menu.ingredients}</h2>
                 <h1>$${menu.price}</h1>
@@ -135,10 +135,10 @@ const orderProcess = function () {
     if (menu.numberOrdered > 0) {
       orderHtml.innerHTML += `
     <div class="order-wrapper">
-        <p class="order-first">${menu.name}<button data-remove=${
+        <p class="order-item">${menu.name}<button data-remove=${
         menu.uuid
       } class="remove-btn" data-remove-btn ="${menu.uuid}">remove</button></p>
-        <p class="order-second"><small>${menu.numberOrdered}x</small>${
+        <p class="order-price"><small>${menu.numberOrdered}x</small>${
         menu.price * menu.numberOrdered
       }$</p>
     </div>`;
@@ -152,7 +152,7 @@ const orderProcess = function () {
     <h3>Total price:</h3>
     <p>${totalPrice}$</p>
   </div>
-  <button class="complete-order-btn wrapper" data-complete-order="complete-order">Complete Order</button>`;
+  <button class="complete-order-btn total-wrapper" data-complete-order="complete-order">Complete Order</button>`;
 
   if (totalPrice === 0) {
     orderTitleHtml.classList.add('hidden');
