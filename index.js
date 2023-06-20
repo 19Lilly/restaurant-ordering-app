@@ -54,12 +54,30 @@ document.addEventListener('submit', function (e) {
 
 //Add and Remove btns
 
+let orderArray = [];
 function handleAddBtnClick(addBtnId) {
   const targetAddBtn = menuArray.filter(function (menuItem) {
     return menuItem.uuid === addBtnId;
   })[0];
 
   targetAddBtn.numberOrdered++;
+  if (targetAddBtn.numberOrdered === 1) {
+    orderArray.push([
+      targetAddBtn.name,
+      targetAddBtn.numberOrdered,
+      targetAddBtn.price,
+      targetAddBtn.uuid,
+    ]);
+  } else {
+    for (let i = 0; i < orderArray.length; i++) {
+      if (orderArray[i][0] === targetAddBtn.name) {
+        orderArray[i][1] = targetAddBtn.numberOrdered;
+        orderArray[i][2] = targetAddBtn.price * targetAddBtn.numberOrdered;
+        orderArray[i][3] = targetAddBtn.uuid;
+      }
+    }
+  }
+
   orderDisplay();
   orderProcess();
 }
@@ -69,6 +87,17 @@ function handleRemoveBtnClick(removeBtnId) {
     return menuItem.uuid === removeBtnId;
   })[0];
   targetRemoveBtn.numberOrdered--;
+
+  for (let i = 0; i < orderArray.length; i++) {
+    if (orderArray[i][0] === targetRemoveBtn.name) {
+      orderArray[i][1] = targetRemoveBtn.numberOrdered;
+      orderArray[i][2] = targetRemoveBtn.price * targetRemoveBtn.numberOrdered;
+    }
+    if (orderArray[i][1] === 0) {
+      orderArray.splice(i, 1);
+    }
+  }
+
   orderProcess();
 }
 
@@ -131,21 +160,17 @@ const orderProcess = function () {
   orderHtml.innerHTML = ``;
   summaryEl.innerHTML = '';
   let totalPrice = 0;
-  menuArray.forEach(function (menu) {
-    if (menu.numberOrdered > 0) {
-      orderHtml.innerHTML += `
-    <div class="order-wrapper">
-        <p class="order-item">${menu.name}<button data-remove=${
-        menu.uuid
-      } class="remove-btn" data-remove-btn ="${menu.uuid}">remove</button></p>
-        <p class="order-price"><small>${menu.numberOrdered}x</small>${
-        menu.price * menu.numberOrdered
-      }$</p>
-    </div>`;
-    }
 
-    totalPrice += menu.price * menu.numberOrdered;
+  orderArray.forEach(function ([name, numberOrdered, price, uuid]) {
+    orderHtml.innerHTML += `
+      <div class="order-wrapper">
+          <p class="order-item">${name}<button data-remove=${uuid} class="remove-btn" data-remove-btn ="${uuid}">remove</button></p>
+          <p class="order-price"><small>${numberOrdered}x</small>${price}$</p>
+      </div>`;
+
+    totalPrice += price;
   });
+
   summaryEl.innerHTML = `
   <div class="divider-total"></div>
   <div class="total total-wrapper">
