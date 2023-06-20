@@ -75,6 +75,7 @@ header h2 {
 /* display menu items */
 
 .menu-item-wrapper {
+  margin: 0 auto;
   gap: 1.25rem;
   padding: 1.563rem;
 }
