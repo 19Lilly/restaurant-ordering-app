@@ -107,7 +107,6 @@ header h2 {
 
 .add-item {
   border-radius: 50%;
-  color: grey;
   background-color: white;
   border: 0.094rem solid #dedede;
   height: 3.125rem;
@@ -122,6 +121,13 @@ header h2 {
   /* or 75% */
   text-align: center;
   color: #3c3c3c;
+}
+
+.add-item:hover,
+.add-item:focus,
+.add-item:active {
+  border: 0.094rem solid #3c3c3c;
+  color: #09fc31;
 }
 
 .divider,
