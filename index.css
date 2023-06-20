@@ -67,8 +67,8 @@ header h2 {
 .order-wrapper,
 .total-wrapper {
   display: flex;
+  width: 31.75rem;
   justify-content: space-between;
-  max-width: 31.75rem;
   margin: 0 auto;
 }
 
