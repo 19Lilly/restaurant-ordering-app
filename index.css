@@ -124,8 +124,7 @@ header h2 {
 }
 
 .add-item:hover,
-.add-item:focus,
-.add-item:active {
+.add-item:focus {
   border: 0.094rem solid #3c3c3c;
   color: #09fc31;
 }
