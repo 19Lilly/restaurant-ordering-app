@@ -76,7 +76,7 @@ header h2 {
 
 .menu-item-wrapper {
   gap: 1.25rem;
-  padding: 25.008px;
+  padding: 1.563rem;
 }
 
 .image-item {
@@ -131,7 +131,7 @@ header h2 {
 
 .divider,
 .divider-total {
-  max-width: 31.75rem;
+  width: 31.75rem;
   margin: 0 auto;
   height: 0.125rem;
   background-color: #d2d2d2;
@@ -237,7 +237,8 @@ small {
 .complete-order-btn,
 .pay-btn {
   display: block;
-  width: 100%;
+  
+  width: 31.75rem
   margin-top: 2.188rem;
   margin-bottom: 2.188rem;
   border: none;
