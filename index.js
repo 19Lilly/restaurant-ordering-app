@@ -134,7 +134,6 @@ paymentModal.onsubmit = function () {
   closeModal();
   const buyerName = document.getElementById('buyer-name').value;
   orderTitleHtml.classList.add('hidden');
-  orderArray = [];
   orderHtml.innerHTML = '';
   summaryEl.innerHTML = '';
   orderHtml.innerHTML = `
@@ -142,6 +141,7 @@ paymentModal.onsubmit = function () {
   menuArray.forEach(function (menu) {
     menu.numberOrdered = 0;
   });
+  orderArray = [];
   event.preventDefault();
   clearAllInputs();
 };
