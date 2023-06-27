@@ -141,7 +141,7 @@ paymentModal.onsubmit = function () {
   menuArray.forEach(function (menu) {
     menu.numberOrdered = 0;
   });
-  orderArray = [];
+  orderArray.splice(0, orderArray.length);
   event.preventDefault();
   clearAllInputs();
 };
