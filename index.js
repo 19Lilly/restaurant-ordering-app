@@ -134,6 +134,7 @@ paymentModal.onsubmit = function () {
   closeModal();
   const buyerName = document.getElementById('buyer-name').value;
   orderTitleHtml.classList.add('hidden');
+  let orderArray = [];
   orderHtml.innerHTML = '';
   summaryEl.innerHTML = '';
   orderHtml.innerHTML = `
