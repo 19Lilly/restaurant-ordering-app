@@ -7,6 +7,9 @@ My final version:
 Preview
 ![image](https://github.com/19Lilly/scrimba-restaurant-ordering-app-lilly/assets/117945803/6200a229-d314-48e2-8a7d-8873ff1977a0)
 
+![restaurant-ordering-app_modal_preview](https://github.com/19Lilly/scrimba-restaurant-ordering-app-lilly/assets/117945803/7a1d47ea-cc33-441f-a802-62965a5e21a6)
+
+
 Link: 
 https://scrimba-restaurant-ordering-app-lilly.netlify.app/
 
