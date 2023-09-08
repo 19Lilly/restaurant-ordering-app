@@ -5,7 +5,8 @@ Solo project after completing Module 5 - Essential JavaScript Concepts on https:
 My final version: 
 
 Preview
-![image](https://github.com/19Lilly/scrimba-restaurant-ordering-app-lilly/assets/117945803/6200a229-d314-48e2-8a7d-8873ff1977a0)
+
+![restaurant-ordering-app_preview](https://github.com/19Lilly/scrimba-restaurant-ordering-app-lilly/assets/117945803/616222d3-3f04-4567-aeba-8da5a83abf71)
 
 ![restaurant-ordering-app_modal_preview](https://github.com/19Lilly/scrimba-restaurant-ordering-app-lilly/assets/117945803/7a1d47ea-cc33-441f-a802-62965a5e21a6)
 
