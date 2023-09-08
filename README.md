@@ -1,2 +1,2 @@
 # restaurant-ordering-app
-v procese vyroby...
+Solo project after completing Module 5 - Essential JavaScript Concepts on https://scrimba.com/learn/frontend 
